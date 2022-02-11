@@ -1,5 +1,5 @@
-# Product Name
-> Short blurb about what your product does.
+# Rails Engine
+> A Rails project that exposes API endpoints for a fictional Etsy clone. 
 
 [![NPM Version][npm-image]][npm-url]
 [![Build Status][travis-image]][travis-url]
@@ -11,16 +11,12 @@ One to two paragraph statement about your product and what it does.
 
 ## Installation
 
-OS X & Linux:
+1.Clone this repository 
+2.cd into rails-engine" directory 
+3.Run 'bundle install
+4.Run 'bundle exec rspec' to run the test suite. 
+5.run 'rails s' to launch the production environment. 
 
-```sh
-npm install my-crazy-module --save
-```
-
-Windows:
-
-```sh
-edit autoexec.bat
 ```
 
 ## Usage example
@@ -38,20 +34,6 @@ make install
 npm test
 ```
 
-## Release History
-
-* 0.2.1
-    * CHANGE: Update docs (module code remains unchanged)
-* 0.2.0
-    * CHANGE: Remove `setDefaultXYZ()`
-    * ADD: Add `init()`
-* 0.1.1
-    * FIX: Crash when calling `baz()` (Thanks @GenerousContributorName!)
-* 0.1.0
-    * The first proper release
-    * CHANGE: Rename `foo()` to `bar()`
-* 0.0.1
-    * Work in progress
 
 ## Meta
 
