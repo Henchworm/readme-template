@@ -1,39 +1,33 @@
-# Rails Engine
+# Rails Engine Lite
 > A Rails project that exposes API endpoints for a fictional Etsy clone. 
 
-[![NPM Version][npm-image]][npm-url]
-[![Build Status][travis-image]][travis-url]
-[![Downloads Stats][npm-downloads]][npm-url]
-
-One to two paragraph statement about your product and what it does.
+Rails Engine Lite is a backend Rails application that provides API endpoints related to merchants, items, and the items merchants sell. 
 
 ![](header.png)
 
-## Installation
+## Setup
 
-1.Clone this repository 
-2.cd into rails-engine" directory 
-3.Run 'bundle install
-4.Run 'bundle exec rspec' to run the test suite. 
-5.run 'rails s' to launch the production environment. 
+1. clone this repository 
+2. cd into 'rails-engine-lite' directory 
+3. run 'bundle install' to install gems
+4. run rake db:{drop,create,migrate,seed} to prepare the database 
+5. run rails db:schema:dump 
+6. run 'bundle exec rspec' to run the test suite
+7. run 'rails s' to launch the production environment
+
+That's it! You can view the database structure by running rails c in the terminal and querying the database. Try Item.all. 
+Alternatively, you can view the ActiveRecord relationships by placing a pry "binding.pry" in the specs and querying the database. Try Merchant.all this time. 
 
 ```
 
-## Usage example
+## Usage example: retrieving JSON data from endpoints 
+Start the application server with rails -s, then run $ curl localhost:300/api/v1/endpoint_you_want
+possible endpoints and their data are as follows: 
 
-A few motivating and useful examples of how your product can be used. Spice this up with code blocks and potentially more screenshots.
-
-_For more examples and usage, please refer to the [Wiki][wiki]._
 
 ## Development setup
-
-Describe how to install all development dependencies and how to run an automated test-suite of some kind. Potentially do this for multiple platforms.
-
-```sh
-make install
-npm test
-```
-
+ruby 2.7.2
+rails 5.2.6
 
 ## Meta
 
