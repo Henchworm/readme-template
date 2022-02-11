@@ -1,9 +1,10 @@
 # Rails Engine Lite
 > A Rails project that exposes API endpoints for a fictional Etsy clone. 
-> This project is based on the schema of little-esty-shop, a previous project for the Turing School. That repo can be found [here](https://github.com/croixk/little-esty-shop)
+> This project is based on the schema of little-esty-shop, a previous project for the Turing School. That repo can be found [here.](https://github.com/croixk/little-esty-shop)
 
 Rails Engine Lite is a backend Rails application that provides API endpoints related to merchants, items, and the items merchants sell. 
-##Schema
+
+## Schema
 
 ![](https://i.imgur.com/xS4Z9ui.png)
 
@@ -19,8 +20,6 @@ Rails Engine Lite is a backend Rails application that provides API endpoints rel
 
 That's it! You can view the database structure by running rails c in the terminal and querying the database. Try Item.all. 
 Alternatively, you can view the ActiveRecord relationships by placing a pry "binding.pry" in the specs and querying the database. Try Merchant.all this time. 
-
-
 
 ## Usage example: retrieving JSON data from endpoints 
 Start the application server with rails -s, then run curl localhost:300/api/v1/endpoint_you_want. 
@@ -43,10 +42,9 @@ http://localhost:3000/api/v1/items/find?min_price=50 finds an item where the min
 http://localhost:3000/api/v1/items/find?max_price=50 finds an item where the maximum price is 50.0 (determined by alphabetical order of item name)
 
 ```
-
 You can view further requests, including POST/PATCH/DELETE and edgecases specs by downloading [this postman suite](https://backend.turing.edu/module3/projects/rails_engine_lite/RailsEngineSection1.postman_collection.json)
 and [this other postman suite.](https://backend.turing.edu/module3/projects/rails_engine_lite/RailsEngineSection2.postman_collection.json)
-Never used Postman? [Check it out here.](https://www.postman.com/postman/workspace/postman-public-workspace/documentation/12959542-c8142d51-e97c-46b6-bd77-52bb66712c9a)
+Never used Postman? [Check it out here. I know you can do it.](https://www.postman.com/postman/workspace/postman-public-workspace/documentation/12959542-c8142d51-e97c-46b6-bd77-52bb66712c9a)
 
 ## Development setup
 ruby 2.7.2
@@ -58,14 +56,15 @@ rails 5.2.6
 Chris Hewitt – [My Cool Website That's Mostly About Music](http://www.goldenbullfrog.com/) – agop5134@gmail.com
 
 
-[https://github.com/Henchwork/](https://github.com/Henchworm/)
+[https://github.com/Henchworm/](https://github.com/Henchworm/)
 
 ## Contributing
 
-1. Fork it (<https://github.com/yourname/yourproject/fork>)
-2. Create your feature branch (`git checkout -b feature/fooBar`)
-3. Commit your changes (`git commit -am 'Add some fooBar'`)
-4. Push to the branch (`git push origin feature/fooBar`)
-5. Create a new Pull Request
-6. Did you use TDD? If no, try again. 
+1. fork it (<https://github.com/Henchworm/rails-engine/fork>)
+2. create your feature branch (`git checkout -b feature/myfeature`)
+3. use TDD
+4. commit your changes (`git commit -am 'Add new merchant'`)
+5. push to the branch (`git push origin feature/myfeature`)
+6. create a new pull request
+
 
