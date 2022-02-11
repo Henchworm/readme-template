@@ -18,12 +18,29 @@ Rails Engine Lite is a backend Rails application that provides API endpoints rel
 That's it! You can view the database structure by running rails c in the terminal and querying the database. Try Item.all. 
 Alternatively, you can view the ActiveRecord relationships by placing a pry "binding.pry" in the specs and querying the database. Try Merchant.all this time. 
 
-```
+
 
 ## Usage example: retrieving JSON data from endpoints 
-Start the application server with rails -s, then run $ curl localhost:300/api/v1/endpoint_you_want
-possible endpoints and their data are as follows: 
+Start the application server with rails -s, then run $ curl localhost:300/api/v1/endpoint_you_want. 
+You can view Ruby-parsed JSON in spec/api/v1/requests. 
 
+Possible endpoints and their data for the production DB are as follows: 
+
+```
+http://localhost:3000/api/v1/merchants get all merchants 
+http://localhost:3000/api/v1/merchants/42  gets merchant with id of 42
+http://localhost:3000/api/v1/merchants/42/items gets all items for merchant with an id of 42
+http://localhost:3000/api/v1/items gets all items 
+http://localhost:3000/api/v1/items/209 gets item with an id of 209 
+http://localhost:3000/api/v1/items/209/merchant gets the merchant of an item with and id of 209
+http://localhost:3000/api/v1/merchants/find?name=Schroeder-Jerde finds one merchant with name like "Schroeder-Jerde"(determined by alphabetical order of merchant name)
+http://localhost:3000/api/v1/items/find_all?name=Item_Nemo_Facere "finds all items with name like "Item Nemo Facere" 
+http://localhost:3000/api/v1/merchants/find_all?name=ILL Schroeder-Jerde finds all merchants with names like "Schroeder-Jerde" 
+http://localhost:3000/api/v1/items/find?name=Item_Nemo_Facere finds one merchant with name like "Item Nemo Facere" (determined by alphabetical order of item name) 
+http://localhost:3000/api/v1/items/find?min_price=50 finds an item where the minimum price is 50.0 (determined by alphabetical order of item name)
+http://localhost:3000/api/v1/items/find?max_price=50 finds an item where the maximum price is 50.0 (determined by alphabetical order of item name)
+
+```
 
 ## Development setup
 ruby 2.7.2
