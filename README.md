@@ -18,8 +18,8 @@ Rails Engine Lite is a backend Rails application that provides API endpoints rel
 6. run 'bundle exec rspec' to run the test suite
 7. run 'rails s' to launch the production environment
 
-That's it! You can view the database structure by running rails c in the terminal and querying the database. Try Item.all. 
-Alternatively, you can view the ActiveRecord relationships by placing a pry "binding.pry" in the specs and querying the test database. Try Merchant.all this time. Don't you miss pet rocks?
+That's it! You can view the database structure by running ```rails c``` in the terminal and querying the database. Try Item.all. 
+Alternatively, you can view the ActiveRecord relationships by placing a pry ```binding.pry``` in the specs and querying the test database. Try Merchant.all this time. Don't you miss pet rocks?
 
 ## Usage example: retrieving JSON data from endpoints 
 Start the application server with rails -s, then run curl localhost:300/api/v1/endpoint_you_want. 
