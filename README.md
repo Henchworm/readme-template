@@ -21,7 +21,7 @@ Alternatively, you can view the ActiveRecord relationships by placing a pry "bin
 
 
 ## Usage example: retrieving JSON data from endpoints 
-Start the application server with rails -s, then run $ curl localhost:300/api/v1/endpoint_you_want. 
+Start the application server with rails -s, then run curl localhost:300/api/v1/endpoint_you_want. 
 You can view Ruby-parsed JSON in spec/api/v1/requests. 
 
 Possible endpoints and their data for the production DB are as follows: 
@@ -41,6 +41,10 @@ http://localhost:3000/api/v1/items/find?min_price=50 finds an item where the min
 http://localhost:3000/api/v1/items/find?max_price=50 finds an item where the maximum price is 50.0 (determined by alphabetical order of item name)
 
 ```
+
+You can view further testing information and endpoint edgecases by downloading [this postman suite](https://backend.turing.edu/module3/projects/rails_engine_lite/RailsEngineSection1.postman_collection.json
+and and [this postman suite](https://backend.turing.edu/module3/projects/rails_engine_lite/RailsEngineSection2.postman_collection.json)
+Never used Postman? [Check it out.](https://www.postman.com/postman/workspace/postman-public-workspace/documentation/12959542-c8142d51-e97c-46b6-bd77-52bb66712c9a)
 
 ## Development setup
 ruby 2.7.2
