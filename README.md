@@ -48,16 +48,22 @@ and [this other postman suite.](https://backend.turing.edu/module3/projects/rail
 Never used Postman? [Check it out here. I know you can do it.](https://www.postman.com/postman/workspace/postman-public-workspace/documentation/12959542-c8142d51-e97c-46b6-bd77-52bb66712c9a)
 
 ## Development setup
-ruby 2.7.2
+```ruby 2.7.2```
 
-rails 5.2.6
+```rails 5.2.6```
 
-## Meta
+## Gems
 
-Chris Hewitt – [My Cool Website That's Mostly About Music](http://www.goldenbullfrog.com/) – agop5134@gmail.com
+![pry v badge](https://img.shields.io/gem/v/pry?color=blue&label=pry)
+![shoulda-matchers v badge](https://img.shields.io/gem/v/shoulda-matchers?label=shoulda-matchers)
+![rspec v badge](https://img.shields.io/gem/v/rspec?color=orange&label=rspec)
+![simplecov v badge](https://img.shields.io/gem/v/simplecov?color=green&label=simplecov)
+![faker badge](https://img.shields.io/badge/faker-red)
+![factor_badge](https://img.shields.io/badge/factorybot-blue)
+![json-apiserializer](https://img.shields.io/badge/json-apiserializer-green)
 
 
-[https://github.com/Henchworm/](https://github.com/Henchworm/)
+
 
 ## Contributing
 
@@ -67,5 +73,13 @@ Chris Hewitt – [My Cool Website That's Mostly About Music](http://www.goldenbu
 4. commit your changes (`git commit -am 'Add new merchant'`)
 5. push to the branch (`git push origin feature/myfeature`)
 6. create a new pull request
+
+## Who am I?
+
+Chris Hewitt – [My Cool Website That's Mostly About Music](http://www.goldenbullfrog.com/) – agop5134@gmail.com
+
+
+[https://github.com/Henchworm/](https://github.com/Henchworm/)
+
 
 
