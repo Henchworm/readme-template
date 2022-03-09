@@ -37,10 +37,10 @@ I chose to keep my POROs as close to the original JSON response as possible, but
 8. send requests to "https://localhost:3000"! List of requests and anticipated responses below. 
 
 That's it! I reccomend using Postman for the requests, as it's easy to format a request by adding it to the "raw body" of a 
-POST request. All endpoints and request bodies here: 
+POST request. All endpoints and request bodies/anticipated responses here: 
 ### GET http://localhost:3000/api/v1/forecast?location=denver,co&Content-Type=application/json&Accept
 ```
-Response: 
+Condensed Response: 
 
 {
     "data": {
@@ -69,42 +69,6 @@ Response:
                     "conditions": "clear sky",
                     "icon": "01d"
                 },
-                {
-                    "date": "2022-03-09",
-                    "sunrise": "2022-03-09T06:20:54.000-07:00",
-                    "sunset": "2022-03-09T18:00:13.000-07:00",
-                    "max_temp": 28.31,
-                    "min_temp": 16.97,
-                    "conditions": "light snow",
-                    "icon": "13d"
-                },
-                {
-                    "date": "2022-03-10",
-                    "sunrise": "2022-03-10T06:19:19.000-07:00",
-                    "sunset": "2022-03-10T18:01:16.000-07:00",
-                    "max_temp": 24.76,
-                    "min_temp": 14.38,
-                    "conditions": "snow",
-                    "icon": "13d"
-                },
-                {
-                    "date": "2022-03-11",
-                    "sunrise": "2022-03-11T06:17:45.000-07:00",
-                    "sunset": "2022-03-11T18:02:18.000-07:00",
-                    "max_temp": 33.85,
-                    "min_temp": 14.31,
-                    "conditions": "clear sky",
-                    "icon": "01d"
-                },
-                {
-                    "date": "2022-03-12",
-                    "sunrise": "2022-03-12T06:16:09.000-07:00",
-                    "sunset": "2022-03-12T18:03:20.000-07:00",
-                    "max_temp": 53.56,
-                    "min_temp": 27.77,
-                    "conditions": "clear sky",
-                    "icon": "01d"
-                }
             ],
             "hourly_weather": [
                 {
@@ -119,48 +83,53 @@ Response:
                     "conditions": "clear sky",
                     "icon": "01d"
                 },
-                {
-                    "time": "14:00:00",
-                    "temperature": 36.14,
-                    "conditions": "clear sky",
-                    "icon": "01d"
-                },
-                {
-                    "time": "15:00:00",
-                    "temperature": 36.05,
-                    "conditions": "clear sky",
-                    "icon": "01d"
-                },
-                {
-                    "time": "16:00:00",
-                    "temperature": 35.83,
-                    "conditions": "clear sky",
-                    "icon": "01d"
-                },
-                {
-                    "time": "17:00:00",
-                    "temperature": 34.54,
-                    "conditions": "clear sky",
-                    "icon": "01d"
-                },
-                {
-                    "time": "18:00:00",
-                    "temperature": 31.28,
-                    "conditions": "clear sky",
-                    "icon": "01n"
-                },
-                {
-                    "time": "19:00:00",
-                    "temperature": 30.36,
-                    "conditions": "clear sky",
-                    "icon": "01n"
                 }
             ]
         }
     }
 }
 ```
-
+### GET http://localhost:3000/api/v1/backgrounds?location=denver,co
+```
+{
+    "data": {
+        "id": null,
+        "type": "background",
+        "attributes": {
+            "description": "Blue Bear Looking In",
+            "location": "denver",
+            "url": "https://images.unsplash.com/photo-1511286148006-ec48824e3282?ixid=MnwzMDc4ODF8MHwxfHNlYXJjaHwxfHxkZW52ZXIlMkNjb3NreWxpbmV8ZW58MHx8fHwxNjQ2NzEzMzcx&ixlib=rb-1.2.1",
+            "credits": {
+                "username": "mirandafayj",
+                "portfolio_link": "http://www.mirandafayj.com",
+                "upsplash_link": "https://api.unsplash.com/photos/lkLTeBY2SZE"
+            }
+        }
+    }
+}
+```
+### POST localhost:3000/api/v1/users
+#### JSON RAW BODY:
+```
+{
+  "email": "you@example.com",
+  "password": "password",
+  "password_confirmation": "password"
+}
+```
+```
+Response:
+{
+    "data": {
+        "id": "2",
+        "type": "users",
+        "attributes": {
+            "email": "chris@example.com",
+            "api_key": "8a232e734270e093e960"
+        }
+    }
+}
+```
 
 
 
