@@ -45,7 +45,9 @@ Never used Postman? [Check it out here.](https://www.postman.com/postman/workspa
 hot tip: all post requests need to be sent with the JSON raw body!
 ```
 
-Here are some example endpoints. The postman tests themselves are located in the repository under /postman. You can use postman to test them, or your preferred API testing service, just copy and paste the URL and JSON raw body. 
+Here are some example endpoints. The postman tests themselves are located in the repository [here](https://www.getpostman.com/collections/a83005c3eec604349066). You can use postman to test them, or your preferred API testing service, just copy and paste the URL and JSON raw body. 
+
+For further testing of requests, check out ```spec api/v1/requests``` for a complete list of requests and a detailed breakdown of the structure of the app's response Ruby-parsed JSON. 
 
 ### GET http://localhost:3000/api/v1/forecast?location=denver,co&Content-Type=application/json&Accept
 ```
@@ -142,8 +144,6 @@ Response:
     }
 }
 ```
-
-For further testing of requests, check out ```spec api/v1/requests``` for a complete list of requests and a detailed breakdown of the structure of the app's response Ruby-parsed JSON. 
 
 ## Development setup
 ```ruby 2.7.2```
