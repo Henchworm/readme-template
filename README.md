@@ -15,12 +15,12 @@ end
 ```
 
 ## Design Principles: 
-The design of this application relies on the facade design pattern. Here's a very high level overview: 
-A controller receives a request from the front end and intiates the creation of a facade, and passes it data(params, from JSON or query). 
-A facade is a ruby class that initializes a Service, and sends the service data to a PORO. 
-A service calls an external api enpoint(get (https://web.site?optional_param) and returns parsed JSON. 
-The parsed JSON is turned into a Ruby object through a PORO. 
-The object is serialized and sent to the route matching the controller action. 
+>The design of this application relies on the facade design pattern. Here's a very high level overview: 
+>A controller receives a request from the front end and intiates the creation of a facade, and passes it data(params, from JSON or query). 
+>A facade is a ruby class that initializes a Service, and sends the service data to a PORO. 
+>A service calls an external api enpoint(get (https://web.site?optional_param) and returns parsed JSON. 
+>The parsed JSON is turned into a Ruby object through a PORO. 
+>The object is serialized and sent to the route matching the controller action. 
 
 That's a lot, right? To see it step-by-step in action, if you checkout and pull down ```pry-branch``` you can pry ever step of the way! Just exit each pry to move on when you are finished exploring each section. 
 
@@ -34,10 +34,15 @@ I chose to keep my POROs as close to the original JSON response as possible, but
 4. run ```rake db:{drop,create,migrate,seed} to prepare the database ```
 6. run ```bundle exec rspec``` to run the test suite
 7. run ```rails s``` to launch the production environment
-8. send requests to "https://localhost:3000"! List of requests and anticipated responses below. 
+8. send requests to "https://localhost:3000". 
 
-That's it! I reccomend using Postman for the requests, as it's easy to format a request by adding it to the "raw body" of a 
-POST request. All endpoints and request bodies/anticipated responses here: 
+I reccomend using Postman for the requests, as it's easy to format a request by adding it to the "raw body" of a 
+POST request. 
+Never used Postman? [Check it out here.](https://www.postman.com/postman/workspace/postman-public-workspace/documentation/12959542-c8142d51-e97c-46b6-bd77-52bb66712c9a)
+*hot tip: all post requests need to be sent with the JSON raw body!  
+
+Here are some example endpoints. The postman tests themselves are located in the repository under /postman. You can use postman to test them, or your preferred API testing service, just copy and paste the URL and JSON raw body. 
+
 ### GET http://localhost:3000/api/v1/forecast?location=denver,co&Content-Type=application/json&Accept
 ```
 Condensed Response: 
@@ -89,28 +94,10 @@ Condensed Response:
     }
 }
 ```
-### GET http://localhost:3000/api/v1/backgrounds?location=denver,co
-```
-{
-    "data": {
-        "id": null,
-        "type": "background",
-        "attributes": {
-            "description": "Blue Bear Looking In",
-            "location": "denver",
-            "url": "https://images.unsplash.com/photo-1511286148006-ec48824e3282?ixid=MnwzMDc4ODF8MHwxfHNlYXJjaHwxfHxkZW52ZXIlMkNjb3NreWxpbmV8ZW58MHx8fHwxNjQ2NzEzMzcx&ixlib=rb-1.2.1",
-            "credits": {
-                "username": "mirandafayj",
-                "portfolio_link": "http://www.mirandafayj.com",
-                "upsplash_link": "https://api.unsplash.com/photos/lkLTeBY2SZE"
-            }
-        }
-    }
-}
-```
 ### POST localhost:3000/api/v1/users
-#### JSON RAW BODY:
+
 ```
+JSON raw body:
 {
   "email": "you@example.com",
   "password": "password",
@@ -130,12 +117,27 @@ Response:
     }
 }
 ```
-
-
-
-
-
-Never used Postman? [Check it out here.](https://www.postman.com/postman/workspace/postman-public-workspace/documentation/12959542-c8142d51-e97c-46b6-bd77-52bb66712c9a)
+### localhost:3000/api/v1/users (sad path email taken) 
+```
+JSON raw body: 
+{
+  "email": "you@example.com",
+  "password": "password",
+  "password_confirmation": "password"
+}
+```
+```
+Response:
+{
+    "status": 400,
+    "message": "Email has already been taken",
+    "data": {
+        "email": [
+            "has already been taken"
+        ]
+    }
+}
+```
 
 For further testing of requests, check out ```spec api/v1/requests``` for a complete list of requests and a detailed breakdown of the structure of the app's response Ruby-parsed JSON. 
 
