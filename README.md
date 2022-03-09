@@ -11,7 +11,6 @@ Multiple API endpoints are consumed for each call, their data is integrated into
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
-end
 ```
 
 ## Design Principles: 
@@ -42,7 +41,9 @@ spec/poros/forecast_spec.rb
 I reccomend using Postman for the requests, as it's easy to format a request by adding it to the "raw body" of a 
 POST request. 
 Never used Postman? [Check it out here.](https://www.postman.com/postman/workspace/postman-public-workspace/documentation/12959542-c8142d51-e97c-46b6-bd77-52bb66712c9a)
-*hot tip: all post requests need to be sent with the JSON raw body!  
+```
+hot tip: all post requests need to be sent with the JSON raw body!
+```
 
 Here are some example endpoints. The postman tests themselves are located in the repository under /postman. You can use postman to test them, or your preferred API testing service, just copy and paste the URL and JSON raw body. 
 
