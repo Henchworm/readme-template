@@ -24,7 +24,10 @@ The design of this application relies on the facade design pattern. Here's a ver
 
 That's a lot, right? To see it step-by-step in action, if you checkout and pull down ```pry-branch``` you can pry ever step of the way! Just exit each pry to move on when you are finished exploring each section. 
 
-I chose to keep my POROs as close to the original JSON response as possible, but filtering out all irrelevant data. You can see an example of this in the test (that one JSON test). 
+I chose to keep my POROs as close to the original JSON response as possible, but filtering out all irrelevant data. You can see an example of this in the test 
+```
+spec/poros/forecast_spec.rb
+```
 
 ## Setup
 
