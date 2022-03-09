@@ -38,9 +38,10 @@ I chose to keep my POROs as close to the original JSON response as possible, but
 
 That's it! I reccomend using Postman for the requests, as it's easy to format a request by adding it to the "raw body" of a 
 POST request. All endpoints and request bodies here: 
-GET http://localhost:3000/api/v1/forecast?location=denver,co&Content-Type=application/json&Accept
-Response: 
+### GET http://localhost:3000/api/v1/forecast?location=denver,co&Content-Type=application/json&Accept
 ```
+Response: 
+
 {
     "data": {
         "id": null,
